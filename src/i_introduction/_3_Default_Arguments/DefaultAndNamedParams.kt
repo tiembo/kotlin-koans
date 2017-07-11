@@ -1,5 +1,6 @@
 package i_introduction._3_Default_Arguments
 
+import syntax.casts.foo
 import util.TODO
 import util.doc2
 
@@ -14,12 +15,16 @@ fun todoTask3(): Nothing = TODO(
     documentation = doc2(),
     references = { name: String -> JavaCode3().foo(name); foo(name) })
 
-fun foo(name: String): String = todoTask3()
+fun foo2(name: String, number: Int = 42, toUpperCase: Boolean = false): String {
+    if (toUpperCase)
+        return name.toUpperCase() + number.toString()
+    else
+        return name + number.toString()
+}
 
 fun task3(): String {
-    todoTask3()
-//    return (foo("a") +
-//            foo("b", number = 1) +
-//            foo("c", toUpperCase = true) +
-//            foo(name = "d", number = 2, toUpperCase = true))
+    return (foo2("a") +
+            foo2("b", number = 1) +
+            foo2("c", toUpperCase = true) +
+            foo2(name = "d", number = 2, toUpperCase = true))
 }

@@ -1,5 +1,6 @@
 package i_introduction._7_Nullable_Types
 
+import i_introduction._6_Data_Classes.JavaCode6
 import util.TODO
 import util.doc7
 
@@ -25,7 +26,10 @@ fun todoTask7(client: Client?, message: String?, mailer: Mailer): Nothing = TODO
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ) {
-    todoTask7(client, message, mailer)
+    val email = client?.personalInfo?.email
+
+    if (email != null && message != null)
+        return mailer.sendMessage(email, message)
 }
 
 class Client (val personalInfo: PersonalInfo?)

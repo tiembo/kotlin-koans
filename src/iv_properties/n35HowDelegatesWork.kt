@@ -21,8 +21,8 @@ fun todoTask35(): Nothing = TODO(
 
 class D {
     var date by EffectiveDate()
-    // The property date$delegate of type EffectiveDate is created;
-    // the generated 'get' and 'set' accessors for 'date' are delegated to it.
+    // The property current$delegate of type EffectiveDate is created;
+    // the generated 'get' and 'set' accessors for 'current' are delegated to it.
     // You can look at the bytecode (by calling "Show Kotlin Bytecode" action in IntelliJ IDEA) for details.
 }
 

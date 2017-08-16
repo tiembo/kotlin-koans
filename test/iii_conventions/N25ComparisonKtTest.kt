@@ -13,13 +13,13 @@ class N25ComparisonKtTest {
     @Test fun testBefore() {
         val first = MyDate(2014, 5, 10)
         val second = MyDate(2014, 7, 11)
-        assertTrue("The date ${first.s} should be before ${second.s}", first < second)
+        assertTrue("The current ${first.s} should be before ${second.s}", first < second)
     }
 
     @Test fun testAfter() {
         val first = MyDate(2014, 10, 20)
         val second = MyDate(2014, 7, 11)
-        assertTrue("The date ${first.s} should be after ${second.s}", first > second)
+        assertTrue("The current ${first.s} should be after ${second.s}", first > second)
     }
 
     /* If you declare 'compareTo' as an extension function, remove this one to make the code compile */
